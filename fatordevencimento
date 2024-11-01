@@ -1,0 +1,21 @@
+function FatorVencto(Data: TDateTime): String;
+var
+  Fator1: Integer;
+  Vencto1, LimiteData: TDateTime;
+  Resultado: Integer;
+begin
+  LimiteData := StrToDate('22/02/2025');
+  if Data > LimiteData then
+  begin
+    Fator1 := 1000;
+    Resultado := Fator1 + (Data - LimiteData);
+  end
+  else
+  begin
+    Fator1 := 1000;
+    Vencto1 := StrToDate('03/07/2000');
+    Resultado := Fator1 + (Data - Vencto1);
+  end;
+
+  Result := FormatFloat('0000', Resultado);
+end;
